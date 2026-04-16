@@ -1,22 +1,27 @@
-package constructor;
+package interfaceprogram;
 
+interface Animal{
+	void eat();
+	void sleep();
+	
+}
+public class Dog implements Animal {
 
+	@Override
+	public void eat() {
+		System.err.println(" dog is eating");
+	}
 
- class Animal
- {
-	 Animal() {
-	        System.out.println("Animal Constructor");
-	    }
- }
-public class Dog {
-
-	Dog() {
-        super();
-        System.out.println("Dog Constructor");
-    }
-
-    public static void main(String[] args) {
-        Dog d = new Dog();
-    }
+	@Override
+	public void sleep() {
+		System.out.println("Dog is sleeping");
+	}
+	public static void main(String args[])
+	{
+		Animal aa=new Dog();
+		aa.eat();
+		aa.sleep();
+	}
+	
 
 }
